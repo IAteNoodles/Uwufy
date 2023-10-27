@@ -78,7 +78,10 @@ class Spotify:
     def unfollowPlaylist(self, playlist_id):
         response = requests.delete(f'https://api.spotify.com/v1/playlists/{playlist_id}/followers', headers=self.headers)
         return response
-    
+
+    def createPlaylist(self, name, description):
+        response = requests.post('https://api.spotify.com/v1/me/playlists', headers=self.headers, json={"name": name, "description": description})
+        return response    
 
 
 link = 'https://api.spotify.com/v1/playlists/7tm08i6ITfMB3itnUbeSV2?si=6e10edd4a6ec4ff5'
