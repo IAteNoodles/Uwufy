@@ -51,4 +51,3 @@ class Downloader:
 class Lyrics:
     def getLyrics(name):
         pass    
-#Cleaning
